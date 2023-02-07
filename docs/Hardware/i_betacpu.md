@@ -43,7 +43,7 @@ At each clock cycle, the CPU has to first **fetch** the current instruction from
 
 ### Instruction Fetch
 
-The first thing a CPU must do is to **compute** the *address* (`ia[31:0]`) of the instruction to execute next, and then **fetch** (read) them (`id[31:0]`) from the Physical Memory Unit  (RAM). When we write programs in high-level languages, its compiler or interpreter will translate them into machine instructions that are specific to the CPU's ISA. The control unit will know what control signals to produce and which signals need to be *routed* where for each type of instruction.
+The first thing a CPU must do is to **compute** the *address* (`ia[31:0]`) of the instruction to execute next, and then **fetch** (read) them (`id[31:0]`) from the Physical Memory Unit  (RAM). When we write programs in high-level languages, its compiler or interpreter will translate them into machine instructions that are specific to the CPU's ISA. The control unit knows what control signals to produce and where signals need to be *routed* to for each type of instruction.
 
 {: .note-title
 > Running an Executable
@@ -148,7 +148,7 @@ To understand how the Write Enable `WE` signal works more clearly, we need to di
 {: .note-title}
 > The Special Register `R31`
 > 
-> R31's content is  always  0x00000000, regardless of what values are written to it. Therefore it is not a regular register like the other 30 registers in the REGFILE. It is simply giving out 0x00000000 as output when RA1 or RA2 is 11111, which is illustrated as the 0 on the rightmost part of each read muxes.
+> R31's content is  always  0x00000000, regardless of what values are written to it. Therefore it is not a regular register like the other 31 registers in the REGFILE. It is simply giving out 0x00000000 as output when RA1 or RA2 is 11111, which is illustrated as the 0 on the rightmost part of each read muxes.
 
 <img src="/50002/assets/contentimage/beta/regfile_detailed.png"  class="center_seventy"/>
 
